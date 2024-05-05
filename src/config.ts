@@ -1,4 +1,4 @@
-import type { Site, Metadata, Socials } from "@types";
+import type { Site, Metadata } from "@types";
 
 import websiteDetails from "./website.json";
 
