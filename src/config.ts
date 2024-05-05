@@ -4,7 +4,7 @@ import websiteDetails from "./website.json";
 
 export const SITE: Site = {
   NAME: `https://${websiteDetails.url}/`,
-  TITLE: websiteDetails.title,
+  TITLE: websiteDetails.name,
   DESCRIPTION: websiteDetails.description,
   NUM_POSTS_ON_HOMEPAGE: 3,
   NUM_WORKS_ON_HOMEPAGE: 2,
