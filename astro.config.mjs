@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 import website from './src/website.json'
 
 export default defineConfig({
-  site: website.url,
+  site: `https://${website.url}`,
   integrations: [mdx(), sitemap(), tailwind()],
 });
