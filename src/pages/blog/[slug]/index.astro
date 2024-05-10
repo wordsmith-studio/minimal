@@ -12,7 +12,7 @@ export async function getStaticPaths() {
     .sort((a, b) => b.data.pubDatetime.valueOf() - a.data.pubDatetime.valueOf());
   return posts.map((post) => ({
     params: { slug: post.slug },
-    props: post,
+    props: {...post, image: post.slug},
   }));
 }
 type Props = CollectionEntry<"blog">;
@@ -21,7 +21,7 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<PageLayout title={post.data.title} description={post.data.description} image={`/blog/${post.data.slug}.png`}>
+<PageLayout title={post.data.title} description={post.data.description}>
   <Container>
     <div class="animate">
       <BackToPrev href="/blog">
