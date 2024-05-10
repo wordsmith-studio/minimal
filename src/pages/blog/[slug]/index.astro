@@ -11,8 +11,8 @@ export async function getStaticPaths() {
     .filter(post => !post.data.draft)
     .sort((a, b) => b.data.pubDatetime.valueOf() - a.data.pubDatetime.valueOf());
   return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: {...post, image: `/blog/${post.slug}.png`},
+    params: { slug: post.slug, image: `/blog/${post.slug}.png` },
+    props: post,
   }));
 }
 type Props = CollectionEntry<"blog">;
