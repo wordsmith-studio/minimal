@@ -58,10 +58,10 @@ const { title, description, image } = Astro.props;
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-{SITE.analyticsEnabled && (
+{SITE.ANALYTICS && (
       <script
           defer
-          data-domain={SITE.cf.name}
+          data-domain={SITE.CF.name}
           src="https://plausible.io/js/script.js"
         />
 )}
