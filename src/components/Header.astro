@@ -18,7 +18,7 @@ const pages = (await getCollection("pages")) || [];
       <nav class="flex gap-1">
         {pages.map((page: CollectionEntry<"pages">) => (
             <Link href={'/' + page.slug + '/'}>
-                {page.data.title}
+                {page.data.title.toLowerCase()}
             </Link>
         ))}
         <Link href="/posts">
